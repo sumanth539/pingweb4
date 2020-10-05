@@ -41,7 +41,7 @@ public class WebLogin extends Inistilization {
 	public void InValidCredientials2() {
 		t.send("1236547896");
 		t.loginButton();
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 
 	}
 
@@ -52,7 +52,7 @@ public class WebLogin extends Inistilization {
 			TestBase t = new TestBase(driver);
 			t.send(null);
 			t.loginButton();
-			Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+			Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 
 		} catch (Exception e) {
 
@@ -64,7 +64,7 @@ public class WebLogin extends Inistilization {
 	public void IntCharCreiantials() {
 		t.send("789abc2312");
 		t.loginButton();
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 
 	}
 
@@ -73,14 +73,14 @@ public class WebLogin extends Inistilization {
 		t.send("998984.99");
 		t.loginButton();
 
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 	}
 
 	@Test
 	public void NumberSPecialCaracters() {
 		t.send("8523496325-");
 		t.loginButton();
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 	}
 
 	@Test
@@ -88,7 +88,7 @@ public class WebLogin extends Inistilization {
 		t.send("  ");
 		t.loginButton();
 
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 	}
 
 	@Test
@@ -96,7 +96,7 @@ public class WebLogin extends Inistilization {
 		t.send("85234  96325");
 		t.loginButton();
 
-		Assert.assertEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
+		Assert.assertNotEquals(driver.getCurrentUrl(), "https://ping.telebu.com/chat");
 	}
 
 }
